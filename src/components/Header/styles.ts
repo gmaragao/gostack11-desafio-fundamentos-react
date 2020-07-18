@@ -31,6 +31,38 @@ export const Container = styled.div<ContainerProps>`
           opacity: 0.6;
         }
       }
+
+      ul {
+        display: flex;
+        li {
+          font-family: Poppins;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+          list-style-type: none;
+          transition: border 0.5s ease;
+
+          & + li {
+            margin-left: 10px;
+          }
+
+          &:after {
+            content: '';
+            display: block;
+            margin: auto;
+            height: 3px;
+            width: 0px;
+            background: transparent;
+            transition: width 0.5s ease, background-color 0.5s ease;
+          }
+
+          &:hover:after {
+            width: 100%;
+            background: #ff872c;
+          }
+        }
+      }
     }
   }
 `;
